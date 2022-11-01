@@ -1,0 +1,30 @@
+body{
+    background-image: url(../asserts/images/bg_body.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+h1{
+    height:100px;
+}
+
+.text{
+    border-radius: 20px;
+    font-size: 50px;
+    text-align: center;
+    height:90px;
+    line-height: 70px;
+    color: #fcedd8;
+     background: #99d98c;
+     font-family: 'Niconne', cursive;
+    font-weight: 700;
+    text-shadow: 1px 1px 0px #301b18, 
+                2px 2px 0px #efa032, 
+                3px 3px 0px #66ceb6, 
+                4px 4px 0px #3bd3d3, 
+                5px 5px 0px #266580, 
+                6px 6px 0px #c11a2b, 
+                7px 7px 0px #c11a2b, 
+                8px 8px 0px #db7d86, 
+                9px 9px 0px #dc6a75;
+}
