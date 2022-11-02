@@ -13,7 +13,7 @@ function Login() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     useEffect(() => {
         axiosInstance
-            .get("http://localhost:5001/fetchUser")
+            .get("https://flora-garden.herokuapp.com/fetchUser")
             .then((res) => setData(res.data))
             .catch((err) => console.log(err, "it has an error"));
     });

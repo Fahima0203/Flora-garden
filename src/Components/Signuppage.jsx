@@ -24,7 +24,7 @@ function Signuppage() {
     console.log(item);
     axiosInstance({
       method: 'post',
-      url: 'http://localhost:5001/uploadSignup',
+      url: 'https://flora-garden.herokuapp.com/uploadSignup',
       data: item //formData
     })
   }
