@@ -1,9 +1,10 @@
 //import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, React } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 import "./Login.css";
+import { axiosInstance } from '../config';
 
 function Login() {
     // React States
@@ -11,7 +12,7 @@ function Login() {
     const [data, setData] = useState([]);
     const [isSubmitted, setIsSubmitted] = useState(false);
     useEffect(() => {
-        axios
+        axiosInstance
             .get("http://localhost:5001/fetchUser")
             .then((res) => setData(res.data))
             .catch((err) => console.log(err, "it has an error"));

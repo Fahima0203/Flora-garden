@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Login.css";
+import { axiosInstance } from '../config';
 
 function Signuppage() {
   // React States
@@ -21,7 +22,7 @@ function Signuppage() {
     event.preventDefault();
     setIsSubmitted(true);
     console.log(item);
-    axios({
+    axiosInstance({
       method: 'post',
       url: 'http://localhost:5001/uploadSignup',
       data: item //formData

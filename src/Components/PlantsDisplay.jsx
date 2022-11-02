@@ -3,12 +3,13 @@ import { useState, useEffect, React } from "react";
 import "./card.scss"
 import Nbar from './Navbar.jsx'
 import Form from 'react-bootstrap/Form';
+import { axiosInstance } from "../config";
 
 function PlantsDisplay() {
   const [data, setData] = useState([]);
   //const [query, setQuery] = useState("");
   useEffect(() => {
-    axios
+    axiosInstance
       .get("http://localhost:5001/fetch")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err, "it has an error"));

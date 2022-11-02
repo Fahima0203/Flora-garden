@@ -23,6 +23,12 @@ mongoose.connect("mongodb+srv://fahima:passpass@cluster0.oz07pn2.mongodb.net/pla
 //require route
 // app.use("/", require("./src/routes/noteRoute"));
 
+// app.use(express.static(path.join(__dirname, "/flora/build")));
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '/flora/build', 'index.html'));
+// });
+
 //storage
 const Storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -118,6 +124,6 @@ app.post("/uploadSignup", (req, res) => {
 //     }); 
 // });
 
-app.listen(5001, () => {
+app.listen(process.env.PORT || 5001 , () => {
   console.log("Express server is running on port 5001");
 });

@@ -5,6 +5,7 @@ import FileBase64 from 'react-file-base64';
 import Nbar from './Navbar.jsx'
 
 import './form.css'
+import { axiosInstance } from '../config.js';
 
 function PlantDetailsForm() {
     // const initialValues = { plantName: "" , testImage:""};
@@ -14,7 +15,7 @@ function PlantDetailsForm() {
     const handleFormSubmit = (event) => {
         event.preventDefault();
         console.log(item)
-        axios({
+        axiosInstance({
             method: 'post',
             url: 'http://localhost:5001/upload',
             data: item //formData
