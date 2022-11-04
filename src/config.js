@@ -1,5 +1,5 @@
 import axios from "axios"
 
 export const axiosInstance = axios.create({
-    baseURL : "https://flora-garden.herokuapp.com/"
+    baseURL: "https://flora-garden-24.herokuapp.com/api"
 })

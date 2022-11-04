@@ -3,14 +3,13 @@ import { useState, useEffect, React } from "react";
 import "./card.scss"
 import Nbar from './Navbar.jsx'
 import Form from 'react-bootstrap/Form';
-import { axiosInstance } from "../config";
 
 function PlantsDisplay() {
   const [data, setData] = useState([]);
   //const [query, setQuery] = useState("");
   useEffect(() => {
-    axiosInstance
-      .get("https://flora-garden.herokuapp.com/fetch")
+    axios
+      .get("https://flora-garden-24.herokuapp.com/api/fetch")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err, "it has an error"));
   });

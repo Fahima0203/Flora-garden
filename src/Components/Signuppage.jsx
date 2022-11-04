@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Login.css";
-import { axiosInstance } from '../config';
 
 function Signuppage() {
   // React States
@@ -22,9 +21,9 @@ function Signuppage() {
     event.preventDefault();
     setIsSubmitted(true);
     console.log(item);
-    axiosInstance({
+    axios({
       method: 'post',
-      url: 'https://flora-garden.herokuapp.com/uploadSignup',
+      url: 'https://flora-garden-24.herokuapp.com/api/uploadSignup',
       data: item //formData
     })
   }

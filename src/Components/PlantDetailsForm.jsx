@@ -5,7 +5,6 @@ import FileBase64 from 'react-file-base64';
 import Nbar from './Navbar.jsx'
 
 import './form.css'
-import { axiosInstance } from '../config.js';
 
 function PlantDetailsForm() {
     // const initialValues = { plantName: "" , testImage:""};
@@ -15,9 +14,9 @@ function PlantDetailsForm() {
     const handleFormSubmit = (event) => {
         event.preventDefault();
         console.log(item)
-        axiosInstance({
+        axios({
             method: 'post',
-            url: 'https://flora-garden.herokuapp.com/upload',
+            url: 'https://flora-garden-24.herokuapp.com/api/upload',
             data: item //formData
         })
 
@@ -42,7 +41,7 @@ function PlantDetailsForm() {
                                 onChange={e => setItem({ ...item, plantName: e.target.value })}
                             />
                             <label className="form-label">Attach Image:</label>
-                            <FileBase64 
+                            <FileBase64
                                 type="file" required
                                 multiple={false}
                                 onDone={({ base64 }) => setItem({ ...item, image: base64 })}

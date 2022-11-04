@@ -1,10 +1,10 @@
 //import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, React } from "react";
-// import axios from "axios";
+// import { axiosInstance } from "../config";
+import axios from 'axios';
 
 import "./Login.css";
-import { axiosInstance } from '../config';
 
 function Login() {
     // React States
@@ -12,8 +12,8 @@ function Login() {
     const [data, setData] = useState([]);
     const [isSubmitted, setIsSubmitted] = useState(false);
     useEffect(() => {
-        axiosInstance
-            .get("https://flora-garden.herokuapp.com/fetchUser")
+        axios
+            .get("https://flora-garden-24.herokuapp.com/api/fetchUser")
             .then((res) => setData(res.data))
             .catch((err) => console.log(err, "it has an error"));
     });

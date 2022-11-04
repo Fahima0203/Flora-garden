@@ -20,9 +20,9 @@ root.render(
         <Route path='/' element={<Home />}></Route>
         <Route path="/PlantsDisplay" element={<PlantsDisplay />}></Route>
         <Route path="/Login" element={<Login />}></Route>
-        <Route path="/SignIn" element={<Signuppage/>}></Route>
-        <Route path="/Contact" element={<Contact/>}></Route>
-        <Route path="/PlantDetailsForm" element={<PlantDetailsForm/>}></Route>
+        <Route path="/SignIn" element={<Signuppage />}></Route>
+        <Route path="/Contact" element={<Contact />}></Route>
+        <Route path="/PlantDetailsForm" element={<PlantDetailsForm />}></Route>
       </Routes>
     </Router>
   </React.StrictMode>
